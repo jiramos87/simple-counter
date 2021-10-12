@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import SecondsCounter from './SecondsCounter';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+window.onload = function() {   
+  let seconds = 0;        
+  const timer = () => {
+    ReactDOM.render(
+      <SecondsCounter seconds={seconds}/>,
+    document.getElementById('root')
+    );
+    seconds++
+  }
+  setInterval(timer, 1000);
+}
+
+
