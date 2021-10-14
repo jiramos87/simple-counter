@@ -7,12 +7,19 @@ input {
   height: 30px;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .countdown-check-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: white; 
 }
 
 .home {
@@ -20,6 +27,22 @@ input {
   flex-direction: row;
   justify-content: center;
   background-color: black;
+}
+
+.buttons-div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+button {
+  width: 70px;
+  height: 20px;
+  font-size: 10px;
+  color: black;
+  background-color: yellow;
+  border-radius: 20px;
+  border: 4px solid black;
 }
 
 .number-div {
